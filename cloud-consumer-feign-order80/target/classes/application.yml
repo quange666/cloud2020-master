@@ -11,7 +11,7 @@ eureka:
 
 # 超时配置
 ribbon:
-  ReadTimeout: 5000
+  ReadTimeout: 4000
   ConnectTimeout: 5000
 
 spring:

@@ -5,6 +5,9 @@ server:
 eureka:
   instance:
     hostname: eureka7002.com
+  server:
+    enable-self-preservation: false # 禁用eureka的自我保护功能
+    viction-interval-timer-in-ms: 2000
   client:
     register-with-eureka: false
     fetch-registry: false
