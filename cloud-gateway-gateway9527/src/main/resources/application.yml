@@ -19,7 +19,7 @@ spring:
           predicates:
             - Path=/payment/lb
             #- After=2020-03-06T12:08:15.582+08:00[Asia/Shanghai]
-            #            - Cookie=username,spectrumrpc
+#            - Cookie=username,spectrumrpc
             #            - Header=X-Request-Id, \d+ #请求头要有X-Request-Id属性，并且值为正数
             #- Method=GET
 #            - Query=username, \d+ #要有参数名username,并且值为正数才会跳转路由
@@ -34,4 +34,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/

@@ -29,12 +29,12 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
         log.info("come in global filter {}", new Date());
 
         ServerHttpRequest request = exchange.getRequest();
-       /* String uname = request.getQueryParams().getFirst("uname");
+        String uname = request.getQueryParams().getFirst("uname");
         if(uname == null){
             log.info("用户名为null，非法用户");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
             return exchange.getResponse().setComplete();
-        }*/
+        }
         return chain.filter(exchange);
     }
 
