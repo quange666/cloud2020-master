@@ -23,11 +23,11 @@ public class FlowLimitController {
 
     @GetMapping("/testA")
     public String testA(){
-//        try {
-//            TimeUnit.MILLISECONDS.sleep(800);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+      /* try {
+           TimeUnit.MILLISECONDS.sleep(8000);
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+        }*/
         return "testA-----";
     }
 
@@ -63,10 +63,10 @@ public class FlowLimitController {
     }
 
     @GetMapping("/testHotKey")
-    @SentinelResource(value = "testHotKey", blockHandler = "dealTestHotKey")
+    @SentinelResource(value = "testHotKey",blockHandler = "dealTestHotKey")
     public String testHotKey(@RequestParam(value = "p1", required = false) String p1,
                              @RequestParam(value = "p2", required = false) String p2){
-        int age = 10 /0;
+        //int age = 10 /0;
         return "testHotKey -----";
     }
 

@@ -12,7 +12,7 @@ spring:
           environment: # 设置rabbitMQ的相关环境配置
             spring:
               rabbitmq:
-                host: localhost
+                host: 192.168.149.129
                 port: 5672
                 username: guest
                 password: guest
@@ -26,7 +26,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
   instance:
     lease-renewal-interval-in-seconds: 2 # 设置心跳的间隔时间，默认30
     lease-expiration-duration-in-seconds: 5 # 超过5秒间隔，默认90

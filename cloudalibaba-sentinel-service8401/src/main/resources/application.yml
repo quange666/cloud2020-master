@@ -6,17 +6,17 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.149.129:8848
     sentinel:
       transport:
         # sentinel dashboard 地址
-        dashboard: localhost:8080
+        dashboard: 192.168.149.129:8858
         # 默认为8719，如果被占用会自动+1，直到找到为止
         port: 8719
       datasource:
         ds1:
           nacos:
-            server-addr: localhost:8848
+            server-addr: 192.168.149.129:8848
             dataId: cloud-alibaba-sentinel-service
             groupId: DEFAULT_GROUP
             data-type: json

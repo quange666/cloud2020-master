@@ -9,7 +9,7 @@ spring:
       discovery:
 #        server-addr: localhost:8848
         # 换成nginx的1111端口
-        server-addr: 192.68.111.144:1111
+        server-addr: 192.168.149.129:8848
 
 management:
   endpoints:
